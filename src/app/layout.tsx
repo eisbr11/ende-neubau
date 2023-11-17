@@ -1,10 +1,10 @@
+import { FC, ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import './globals.css';
 import { apiPlugin, storyblokInit } from '@storyblok/react/rsc';
 import Config from '@/lib/Config';
-import { FC, ReactElement } from 'react';
 import StoryblokBridgeLoader from '@storyblok/react/bridge-loader';
+import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -23,7 +23,7 @@ storyblokInit({
 });
 
 interface IRootLayoutProps {
-  children: ReactElement;
+  children: ReactNode;
 }
 
 const RootLayout: FC<IRootLayoutProps> = ({ children }) => {
