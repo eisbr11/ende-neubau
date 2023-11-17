@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import { apiPlugin, storyblokInit } from '@storyblok/react/rsc';
 import Config from '@/lib/Config';
 import StoryblokBridgeLoader from '@storyblok/react/bridge-loader';
+import Providers from './providers';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -28,9 +29,11 @@ interface IRootLayoutProps {
 
 const RootLayout: FC<IRootLayoutProps> = ({ children }) => {
   return (
-    <html lang="en">
-    <body className={inter.className}>{children}</body>
-    <StoryblokBridgeLoader options={{}} />
+    <html lang="en" className={'dark'}>
+      <body className={inter.className}>
+        <Providers>{children}</Providers>
+      </body>
+      <StoryblokBridgeLoader options={{}} />
     </html>
   );
 };
