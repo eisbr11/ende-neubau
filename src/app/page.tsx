@@ -6,8 +6,9 @@ const Page = () => {
       }
     >
       <h1 className={'text-6xl text-amber-900 drop-shadow'}>Ende Neubau</h1>
-      <div className={'z-10'}>
+      <div className={'z-10 min-w-min'}>
         <iframe
+          className={'mb-2'}
           style={{
             borderRadius: 12,
           }}
@@ -18,6 +19,10 @@ const Page = () => {
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
         ></iframe>
+        <p className={'text-amber-900 text-2xl mb-2'}>
+          {'Dolce Vita - das neue Album von Ende Neubau!'}
+        </p>
+        <p className={'text-amber-900 text-4xl mb-2'}>{'Check it out now!'}</p>
       </div>
     </div>
   );

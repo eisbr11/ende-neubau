@@ -7,6 +7,7 @@ export default function manifest(): MetadataRoute.Manifest {
     description: 'The Website of Berlin based band Ende Neubau',
     start_url: '/',
     display: 'standalone',
+    lang: 'de',
     background_color: '#fff',
     theme_color: '#fff',
     icons: [
