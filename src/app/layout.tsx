@@ -6,6 +6,7 @@ import Config from '@/lib/Config';
 import StoryblokBridgeLoader from '@storyblok/react/bridge-loader';
 import Providers from './providers';
 import './globals.css';
+import { Background } from '@/components/Background/Background';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -31,7 +32,10 @@ const RootLayout: FC<IRootLayoutProps> = ({ children }) => {
   return (
     <html lang="en" className={'dark'}>
       <body className={inter.className}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <Background />
+          <div className={'z-10'}>{children}</div>
+        </Providers>
       </body>
       <StoryblokBridgeLoader options={{}} />
     </html>
